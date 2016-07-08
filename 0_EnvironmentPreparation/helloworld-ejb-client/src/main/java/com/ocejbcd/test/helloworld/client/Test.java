@@ -16,7 +16,7 @@ public class Test {
         this.context = new InitialContext(jndiProperties);
 	}
 	private Hello lookupHelloBeanEJB() throws NamingException {
-        return (Hello) context.lookup("ejb:/helloworld-ejb//HelloBean!com.ocejbcd.test.helloworld.Hello");
+        return (Hello) context.lookup("ejb:/helloworld-ejb-0.0.1-SNAPSHOT//HelloBean!com.ocejbcd.test.helloworld.Hello");
     }
 	
 	public String hello() throws NamingException{
