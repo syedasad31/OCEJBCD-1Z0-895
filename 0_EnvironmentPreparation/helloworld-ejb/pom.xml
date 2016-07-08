@@ -35,26 +35,8 @@
 				<version>2.3</version>
 				<configuration>
 					<ejbVersion>3.1</ejbVersion>
-				</configuration>
-			</plugin>
-
-			<!-- WildFly plugin to deploy the application -->
-			<plugin>
-				<groupId>org.wildfly.plugins</groupId>
-				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>1.1.0.Alpha9</version>
-				<configuration>
-					<filename>${project.artifactId}.jar</filename>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<!-- enforce Java 6 -->
-					<source>1.6</source>
-					<target>1.6</target>
+					<!-- Generate ejb-client for client project -->
+                    <generateClient>true</generateClient>
 				</configuration>
 			</plugin>
 		</plugins>
