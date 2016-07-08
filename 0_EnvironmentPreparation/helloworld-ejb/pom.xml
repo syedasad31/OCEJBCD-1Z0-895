@@ -39,6 +39,38 @@
                     <generateClient>true</generateClient>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<!-- enforce Java 6 -->
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			
+			<!-- WildFly plugin to deploy the application -->
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.0.2.Final</version>
+				<configuration>
+					<filename>${project.artifactId}.jar</filename>
+					<!-- <hostname>127.0.0.1</hostname>
+					<port>9990</port>
+					<username>asad.ali</username>
+					<password>asad12#</password> -->
+				</configuration>
+				<!-- <executions>
+					<execution>
+ 						<phase>package</phase>
+ 						<goals>
+ 							<goal>deploy</goal>
+ 						</goals>
+					</execution>
+				</executions> -->
+			</plugin>
 		</plugins>
 	</build>
 </project>
